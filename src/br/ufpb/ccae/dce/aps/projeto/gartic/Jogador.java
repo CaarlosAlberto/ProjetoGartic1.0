@@ -49,6 +49,18 @@ public class Jogador {
 		// TODO Auto-generated method stub
 		return true;
 	}
+	
+	public void InseriPalavraAdivinhar(GerenciadorBancoPalavras palavras) {
+		// TODO Auto-generated method stub
+		
+		if (palavras.palavraAdvinhar()){
+			throw new ExcecaoGartic("BLOQUEADA MSG");
+		   } else {
+			   System.out.println(palavras);
+	       }
+		}
+
+}
 
 	
 }
