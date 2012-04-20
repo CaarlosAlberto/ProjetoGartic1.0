@@ -34,7 +34,7 @@ public class TestesFachadaGartic {
 		
 	}
 
-	// testa a conexão
+	// testa a conexï¿½o
     @Test 
 	public void testInitConexaoRede() {
     	
@@ -50,7 +50,7 @@ public class TestesFachadaGartic {
     	Assert.assertTrue(novoJogo.iniciar());
     } 
     
-    // teste se o nick fornecido já existe
+    // teste se o nick fornecido jï¿½ existe
 	@Test (expected=ExcecaoGartic.class)
 	public void testNick() throws ExcecaoGartic {
 		    novoJogo.iniciar();
@@ -64,8 +64,8 @@ public class TestesFachadaGartic {
 		fachada.redeConectar();
     	Assert.assertTrue(novoJogo.iniciar());
 		fachada.conexaoBD();
-	    Assert.assertTrue(fachada.insereNick("Carlos"));
-	    novoJogo.VerificarNickIgual("Carlos");
+	        Assert.assertTrue(fachada.insereNick("Carlos"));
+	        novoJogo.VerificarNickIgual("Carlos");
 		novoJogo.criarSala(" Animal");
 		Assert.assertTrue(novoJogo.existeSala("Animal"," "));
 	}
@@ -95,7 +95,7 @@ public class TestesFachadaGartic {
     	fachada.secaoTema("Animal");
         Assert.assertTrue(fachada.initPartida());
         novoJogo.escolherJogoDavez();
-    }
+        }
 	
 	// teste de banco de palavra
 	@Test
@@ -110,6 +110,12 @@ public class TestesFachadaGartic {
 		jogador.inserePalavra();
 	}
 	
+	
+	@Test (expected=ExcecaoGartic.class)
+	public void Palavrabloqueada() throws ExcecaoGartic{
+		jogador.InseriPalavraAdivinhar(tema);
+	}
+	
 	@Test 
 	public void testTempo(){
 	    jogador.setNick("Carlos");
@@ -122,9 +128,9 @@ public class TestesFachadaGartic {
 	 }
 	
 	@Test
-    public void testInitEditor() {
+        public void testInitEditor() {
             Assert.assertFalse(fGUI.initEditor());
-    }
+         }
     
 	@Test (expected=ExcecaoGartic.class)
 	public void testPImproprias() throws ExcecaoGartic{
