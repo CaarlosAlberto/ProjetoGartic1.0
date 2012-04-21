@@ -90,12 +90,19 @@ public class TestesFachadaGartic {
 	//Iniciar partida.
 	@Test 
 	public void testInitPartida()  {
-		fachada.iniciarJogo(novoJogo);
-    	fachada.insereNick("Carlos");
-    	fachada.secaoTema("Animal");
-        Assert.assertTrue(fachada.initPartida());
-        novoJogo.escolherJogoDavez();
-        }
+	fachada.iniciarJogo(novoJogo);
+	fachada.insereNick("Carlos");
+	fachada.secaoTema("Animal");
+	Assert.assertTrue(fachada.initPartida());
+	novoJogo.escolherJogoDavez();
+		        }
+	
+	@Test
+          public void proximaRodada(){
+	 	 jogador.setPotuacao(125);
+	  	 jogador.proximaRodada();
+   }
+	
 	
 	// teste de banco de palavra
 	@Test
