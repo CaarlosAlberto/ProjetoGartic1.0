@@ -133,6 +133,12 @@ public class TestesFachadaGartic {
 	    Assert.assertTrue(novoJogo.recebeTema());
 	    Assert.assertTrue(novoJogo.tempoLimite(tema.tempoAcabou()));
 	 }
+	 
+	 @Test
+	public void inatividadeJogodor(){
+		novoJogo.tempoTotalDoJogo();
+		novoJogo.sairTempoEspirou();
+	}
 	
 	@Test
         public void testInitEditor() {
