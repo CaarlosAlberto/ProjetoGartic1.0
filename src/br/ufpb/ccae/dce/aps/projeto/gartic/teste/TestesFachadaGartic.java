@@ -135,7 +135,7 @@ public class TestesFachadaGartic {
 	 }
 	 
 	 @Test
-	public void inatividadeJogodor(){
+	public void inatividadeJogador{
 		novoJogo.tempoTotalDoJogo();
 		novoJogo.sairTempoEspirou();
 	}
