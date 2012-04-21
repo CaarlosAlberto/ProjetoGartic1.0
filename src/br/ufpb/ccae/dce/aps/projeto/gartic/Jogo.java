@@ -82,4 +82,15 @@ public class Jogo {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	public boolean tempoTotalDoJogo() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	public boolean sairTempoEspirou() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+	
+
 }
